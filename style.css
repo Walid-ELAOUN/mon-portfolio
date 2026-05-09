@@ -74,6 +74,18 @@ section {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply py-20 md:py-32; /* Consistent responsive vertical padding */
+}
+
+/* Mobile Specific Fixes */
+@media (max-width: 768px) {
+    #hero {
+        padding-bottom: 2rem;
+    }
+    /* Hide the mouse scroll indicator on mobile to avoid overlap with badges */
+    .animate-bounce.cursor-pointer {
+        display: none;
+    }
 }
 
 section.visible {
