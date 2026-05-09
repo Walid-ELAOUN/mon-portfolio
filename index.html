@@ -316,18 +316,18 @@
             </div>
 
             <div class="relative max-w-4xl mx-auto">
-                <!-- Vertical Line (Desktop) -->
-                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-slate-800 -translate-x-1/2"></div>
+                <!-- Vertical Line (Visible on all screens, moved to left on mobile) -->
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-slate-800 md:-translate-x-1/2"></div>
 
                 <div class="space-y-12">
                     <!-- Step 1 -->
                     <div class="relative flex flex-col md:flex-row items-center group">
-                        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0 mb-4 md:mb-0">
                             <h3 class="text-xl font-bold text-white mb-2">1. Analyse & Stratégie</h3>
                             <p class="text-sm text-slate-400">Compréhension de vos besoins, analyse des données existantes ou définition du cahier des charges web.</p>
                         </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10 hidden md:flex">
-                            <i data-lucide="search" class="text-white w-5 h-5"></i>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="search" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
                         </div>
                         <div class="md:w-1/2 md:pl-12"></div>
                     </div>
@@ -335,10 +335,10 @@
                     <!-- Step 2 -->
                     <div class="relative flex flex-col md:flex-row items-center group">
                         <div class="md:w-1/2 md:pr-12"></div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-secondary rounded-full flex items-center justify-center z-10 hidden md:flex">
-                            <i data-lucide="pen-tool" class="text-white w-5 h-5"></i>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="pen-tool" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
                         </div>
-                        <div class="md:w-1/2 md:pl-12">
+                        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
                             <h3 class="text-xl font-bold text-white mb-2">2. Conception & Modélisation</h3>
                             <p class="text-sm text-slate-400">Création de maquettes Elementor ou préparation des modèles de Machine Learning et architectures ETL.</p>
                         </div>
@@ -346,12 +346,12 @@
 
                     <!-- Step 3 -->
                     <div class="relative flex flex-col md:flex-row items-center group">
-                        <div class="md:w-1/2 md:pr-12 md:text-right mb-4 md:mb-0">
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0 mb-4 md:mb-0">
                             <h3 class="text-xl font-bold text-white mb-2">3. Développement & Itération</h3>
                             <p class="text-sm text-slate-400">Phase de codage intensive (Python/WP), tests unitaires et ajustements réguliers selon vos feedbacks.</p>
                         </div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-primary rounded-full flex items-center justify-center z-10 hidden md:flex">
-                            <i data-lucide="code" class="text-white w-5 h-5"></i>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="code" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
                         </div>
                         <div class="md:w-1/2 md:pl-12"></div>
                     </div>
@@ -359,10 +359,10 @@
                     <!-- Step 4 -->
                     <div class="relative flex flex-col md:flex-row items-center group">
                         <div class="md:w-1/2 md:pr-12"></div>
-                        <div class="absolute left-1/2 -translate-x-1/2 w-10 h-10 bg-secondary rounded-full flex items-center justify-center z-10 hidden md:flex">
-                            <i data-lucide="rocket" class="text-white w-5 h-5"></i>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="rocket" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
                         </div>
-                        <div class="md:w-1/2 md:pl-12">
+                        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
                             <h3 class="text-xl font-bold text-white mb-2">4. Livraison & Optimisation</h3>
                             <p class="text-sm text-slate-400">Mise en ligne, formation à l'outil et suivi des performances (SEO ou précision du modèle).</p>
                         </div>
