@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walid El Aoun | Web Designer & WordPress Developer</title>
+    <meta name="description" content="Portfolio professionnel de Walid El Aoun - Créateur de sites WordPress, sites vitrines et boutiques e-commerce WooCommerce. Freelance web designer et développeur WordPress.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3b82f6',
+                        secondary: '#06b6d4',
+                        dark: '#0f172a',
+                        darker: '#020617',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darker text-slate-300 font-sans selection:bg-primary/30">
+
+    <!-- Header / Navbar -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent" id="navbar">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Walid<span class="text-white">.Dev</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                <a href="#hero" class="hover:text-primary transition-colors">Accueil</a>
+                <a href="#about" class="hover:text-primary transition-colors">À propos</a>
+                <a href="#services" class="hover:text-primary transition-colors">Services</a>
+                <a href="#projets" class="hover:text-primary transition-colors font-semibold text-primary">Projets</a>
+                <a href="#skills" class="hover:text-primary transition-colors">Compétences</a>
+                <a href="#process" class="hover:text-primary transition-colors">Processus</a>
+                <a href="#contact" class="ml-2 px-5 py-2 bg-primary text-white font-bold rounded-full hover:bg-blue-600 transition-all">Contact</a>
+            </div>
+            <button class="md:hidden text-white" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-dark border-b border-slate-800 px-6 py-4 flex flex-col space-y-4">
+            <a href="#hero" class="mobile-link">Accueil</a>
+            <a href="#about" class="mobile-link">À propos</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#projets" class="mobile-link">Projets</a>
+            <a href="#skills" class="mobile-link">Compétences</a>
+            <a href="#process" class="mobile-link">Processus</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center pt-20 pb-16 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute top-1/4 -left-20 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] animate-pulse"></div>
+            <div class="absolute bottom-1/4 -right-20 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] animate-pulse" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <!-- Text Content -->
+                <div class="flex-1 text-center lg:text-left order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-wider text-primary uppercase bg-primary/10 border border-primary/20 rounded-full animate-fade-in">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Disponible pour nouveaux projets
+                    </div>
+                    <h1 class="text-4xl md:text-6xl xl:text-7xl font-heading font-bold text-white mb-6 leading-[1.1]">
+                        Walid El Aoun<br>
+                        <span class="bg-gradient-to-r from-primary via-secondary to-primary bg-[length:200%_auto] animate-gradient bg-clip-text text-transparent">
+                            Web Designer & WordPress Developer
+                        </span>
+                    </h1>
+                    <p class="max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-slate-400 mb-10 leading-relaxed">
+                        Je crée des sites WordPress modernes, professionnels et adaptés à vos objectifs. Sites vitrines, e-commerce WooCommerce et solutions WordPress personnalisées.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#projets" class="group px-8 py-4 bg-primary text-white font-bold rounded-xl hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all flex items-center justify-center gap-2">
+                            Voir mes projets <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-slate-900 text-white font-bold rounded-xl border border-slate-800 hover:bg-slate-800 transition-all flex items-center justify-center">
+                            Créer mon site
+                        </a>
+                    </div>
+
+                    <div class="mt-12 flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6">
+                        <div class="px-5 py-3 bg-dark border border-slate-800 rounded-xl text-center lg:text-left hover:border-primary/50 transition-all">
+                            <span class="block text-sm md:text-base font-bold text-white">WordPress</span>
+                            <span class="text-[10px] text-slate-500 uppercase tracking-wider">CMS & E-commerce</span>
+                        </div>
+                        <div class="px-5 py-3 bg-dark border border-slate-800 rounded-xl text-center lg:text-left hover:border-primary/50 transition-all">
+                            <span class="block text-sm md:text-base font-bold text-white">Elementor</span>
+                            <span class="text-[10px] text-slate-500 uppercase tracking-wider">Création de pages</span>
+                        </div>
+                        <div class="px-5 py-3 bg-dark border border-slate-800 rounded-xl text-center lg:text-left hover:border-secondary/50 transition-all">
+                            <span class="block text-sm md:text-base font-bold text-white">Freelance</span>
+                            <span class="text-[10px] text-slate-500 uppercase tracking-wider">Disponible pour projets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="flex-1 order-1 lg:order-2 relative group mb-8 lg:mb-0">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 lg:w-[450px] lg:h-[450px] mx-auto">
+                        <div class="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-[2rem] blur-2xl group-hover:opacity-75 transition-opacity duration-500"></div>
+                        <div class="absolute inset-0 border-2 border-slate-800 rounded-[2rem] transform rotate-3 group-hover:rotate-6 transition-transform duration-500"></div>
+                        <div class="absolute inset-0 border-2 border-primary/30 rounded-[2rem] transform -rotate-3 group-hover:-rotate-1 transition-transform duration-500"></div>
+                        <div class="relative h-full w-full rounded-[2rem] overflow-hidden border border-slate-700 bg-slate-900 shadow-2xl">
+                            <img src="walidphoto.png" alt="Walid El Aoun" class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-500 hover:text-primary transition-colors animate-bounce cursor-pointer">
+            <i data-lucide="mouse" class="w-6 h-6"></i>
+        </a>
+    </section>
+
+    <!-- À propos Section -->
+    <section id="about" class="py-20 bg-dark/50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-6">À propos</h2>
+                    <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mb-8"></div>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Passionné par la création web, je me suis spécialisé dans la conception de sites WordPress professionnels. Mon approche combine design soigné et expérience utilisateur pour transformer vos idées en sites web performants et élégants.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Que vous soyez une entreprise, un indépendant ou une marque, j'adapte chaque projet à vos besoins spécifiques. De la création d'un site vitrine à la mise en place d'une boutique e-commerce WooCommerce, j'accompagne mes clients à chaque étape du processus.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Mon objectif : vous offrir un site moderne, responsive et facile à administrer, qui reflète fidèlement votre identité et vos ambitions.
+                    </p>
+                </div>
+                <div class="flex-1 grid grid-cols-2 gap-6">
+                    <div class="p-6 bg-dark border border-slate-800 rounded-2xl text-center hover:border-primary/50 transition-all">
+                        <div class="text-4xl font-heading font-bold text-primary mb-2">3</div>
+                        <div class="text-sm text-slate-500">Projets réalisés</div>
+                    </div>
+                    <div class="p-6 bg-dark border border-slate-800 rounded-2xl text-center hover:border-secondary/50 transition-all">
+                        <div class="text-4xl font-heading font-bold text-secondary mb-2">100%</div>
+                        <div class="text-sm text-slate-500">Satisfaction client</div>
+                    </div>
+                    <div class="p-6 bg-dark border border-slate-800 rounded-2xl text-center hover:border-primary/50 transition-all">
+                        <div class="text-4xl font-heading font-bold text-primary mb-2">WordPress</div>
+                        <div class="text-sm text-slate-500">Spécialisation</div>
+                    </div>
+                    <div class="p-6 bg-dark border border-slate-800 rounded-2xl text-center hover:border-secondary/50 transition-all">
+                        <div class="text-4xl font-heading font-bold text-secondary mb-2">24/7</div>
+                        <div class="text-sm text-slate-500">Support dédié</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-darker relative overflow-hidden">
+        <div class="absolute top-1/2 right-0 w-64 h-64 bg-secondary/10 rounded-full blur-[100px] -z-10"></div>
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Mes Services</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                <p class="text-slate-400 max-w-2xl mx-auto">Des solutions WordPress complètes pour donner vie à votre présence en ligne.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Site Vitrine</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Création de sites professionnels pour entreprises, indépendants, agences et marques. Design moderne et responsive.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="shopping-cart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Site E-commerce</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Création de boutiques en ligne avec WooCommerce et personnalisation du parcours utilisateur.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Création WordPress</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Installation, configuration et personnalisation complète de sites WordPress selon vos besoins.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="refresh-cw"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Refonte de Site</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Modernisation d'un site existant avec amélioration du design, de la structure et du responsive.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="sliders"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Personnalisation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Modification et adaptation de thèmes, pages, composants et fonctionnalités selon vos besoins.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl hover:border-primary/50 transition-all group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                        <i data-lucide="wrench"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Maintenance & Optimisation</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Amélioration des performances, corrections, mises à jour et optimisation générale du site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="skills" class="py-24 bg-dark/50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Compétences</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- CMS & E-commerce -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl">
+                    <h3 class="text-lg font-bold text-primary mb-6 flex items-center gap-2">
+                        <i data-lucide="database" class="w-5 h-5"></i> CMS & E-commerce
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>WordPress</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>WooCommerce</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Création & Design -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl">
+                    <h3 class="text-lg font-bold text-primary mb-6 flex items-center gap-2">
+                        <i data-lucide="pen-tool" class="w-5 h-5"></i> Création & Design
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>Elementor</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>Responsive Design</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>UI / Web Design</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Développement -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl">
+                    <h3 class="text-lg font-bold text-primary mb-6 flex items-center gap-2">
+                        <i data-lucide="code" class="w-5 h-5"></i> Développement
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>HTML / CSS</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>JavaScript</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>PHP / WordPress</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- SEO & Performance -->
+                <div class="p-8 bg-dark border border-slate-800 rounded-2xl">
+                    <h3 class="text-lg font-bold text-primary mb-6 flex items-center gap-2">
+                        <i data-lucide="search" class="w-5 h-5"></i> SEO & Performance
+                    </h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>SEO technique de base</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>Optimisation des images</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-slate-400">
+                            <i data-lucide="check-circle-2" class="text-secondary w-4 h-4 flex-shrink-0"></i>
+                            <span>Performance & Responsive</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-24 bg-darker relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Mon Processus</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                <p class="text-slate-400">Une approche structurée pour garantir la qualité et la performance de chaque projet.</p>
+            </div>
+
+            <div class="relative max-w-4xl mx-auto">
+                <div class="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-slate-800 md:-translate-x-1/2"></div>
+
+                <div class="space-y-12">
+                    <!-- Step 1 -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0 mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-white mb-2">01 — Échange</h3>
+                            <p class="text-sm text-slate-400">Comprendre votre activité, vos besoins et vos objectifs pour définir la direction du projet.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="message-circle" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="layers" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
+                            <h3 class="text-xl font-bold text-white mb-2">02 — Structure</h3>
+                            <p class="text-sm text-slate-400">Définir l'arborescence, la structure des pages et l'organisation du contenu.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0 mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-white mb-2">03 — Design</h3>
+                            <p class="text-sm text-slate-400">Créer une interface cohérente avec l'identité visuelle du projet et une expérience utilisateur optimale.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="pen-tool" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="code" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
+                            <h3 class="text-xl font-bold text-white mb-2">04 — Développement</h3>
+                            <p class="text-sm text-slate-400">Construire et personnaliser le site WordPress avec Elementor et les fonctionnalités requises.</p>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <div class="md:w-1/2 md:pr-12 md:text-right pl-12 md:pl-0 mb-4 md:mb-0">
+                            <h3 class="text-xl font-bold text-white mb-2">05 — Responsive</h3>
+                            <p class="text-sm text-slate-400">Adapter le site aux différents écrans : desktop, tablette et mobile pour une expérience optimale.</p>
+                        </div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-primary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="smartphone" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12"></div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="relative flex flex-col md:flex-row items-center group">
+                        <div class="md:w-1/2 md:pr-12"></div>
+                        <div class="absolute left-4 md:left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-secondary rounded-full flex items-center justify-center z-10">
+                            <i data-lucide="rocket" class="text-white w-4 h-4 md:w-5 md:h-5"></i>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
+                            <h3 class="text-xl font-bold text-white mb-2">06 — Mise en ligne</h3>
+                            <p class="text-sm text-slate-400">Tester, optimiser les performances et SEO, puis mettre le site en production.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="py-24 bg-dark/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Mes Réalisations</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-8"></div>
+                <p class="text-slate-400 max-w-2xl mx-auto">Découvrez une sélection de projets WordPress que j'ai réalisés pour des clients variés.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+                <!-- Projet 1 — Tathmeen -->
+                <div class="project-card group bg-dark border border-slate-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="tathmeentn hero section.png" alt="Tathmeen - Agence de Biogaz" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer view-project" data-id="1">
+                            <span class="text-white font-bold px-4 py-2 border-2 border-white rounded-lg">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-primary font-bold uppercase">Site Vitrine</span>
+                        <h3 class="text-lg font-bold text-white mt-2">Tathmeen</h3>
+                        <p class="text-sm text-slate-400 mt-2">Site vitrine pour une agence de biogaz offrant des solutions durables aux agriculteurs.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">WordPress</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Elementor</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Responsive</span>
+                        </div>
+                        <a href="https://tathmeen.tn" target="_blank" class="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline">
+                            Voir le site <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Projet 2 — Webly -->
+                <div class="project-card group bg-dark border border-slate-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="hero section webly.png" alt="Webly - Agence de Création Web" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-secondary/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer view-project" data-id="2">
+                            <span class="text-white font-bold px-4 py-2 border-2 border-white rounded-lg">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-secondary font-bold uppercase">Site Vitrine</span>
+                        <h3 class="text-lg font-bold text-white mt-2">Webly</h3>
+                        <p class="text-sm text-slate-400 mt-2">Site vitrine pour une agence spécialisée dans la création de sites web professionnels.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">WordPress</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Elementor</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Responsive</span>
+                        </div>
+                        <a href="https://www.webly.flexystoretunisie.com" target="_blank" class="inline-flex items-center gap-2 mt-4 text-sm text-secondary hover:underline">
+                            Voir le site <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Projet 3 — Hydrosan E-commerce -->
+                <div class="project-card group bg-dark border border-slate-800 rounded-2xl overflow-hidden hover:shadow-2xl transition-all">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="hydrosan home.png" alt="Hydrosan - Site E-commerce Industriel" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer view-project" data-id="3">
+                            <span class="text-white font-bold px-4 py-2 border-2 border-white rounded-lg">Voir le projet</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-primary font-bold uppercase">E-commerce / Sur mesure</span>
+                        <h3 class="text-lg font-bold text-white mt-2">Hydrosan</h3>
+                        <p class="text-sm text-slate-400 mt-2">Site e-commerce sur mesure pour vente de bidons, bouchons et flacons alimentaires et industriels.</p>
+                        <div class="flex flex-wrap gap-2 mt-4">
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">WordPress</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">WooCommerce</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Elementor</span>
+                            <span class="px-2 py-1 bg-slate-800 text-slate-400 text-xs rounded-full">Sur mesure</span>
+                        </div>
+                        <a href="https://hydrosan.tn" target="_blank" class="inline-flex items-center gap-2 mt-4 text-sm text-primary hover:underline">
+                            Voir le site <i data-lucide="external-link" class="w-3 h-3"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-darker/90 backdrop-blur-md">
+        <div class="bg-dark border border-slate-800 rounded-3xl max-w-5xl w-full max-h-[90vh] overflow-y-auto relative animate-fade-in">
+            <button id="close-modal" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors z-10">
+                <i data-lucide="x-circle" size="32"></i>
+            </button>
+            <div id="modal-content" class="p-8">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-dark/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-dark border border-slate-800 rounded-3xl overflow-hidden flex flex-col md:flex-row">
+                <div class="p-10 md:w-1/3 bg-gradient-to-br from-primary to-secondary text-white">
+                    <h2 class="text-2xl font-bold mb-6">Travaillons ensemble</h2>
+                    <p class="text-blue-100 text-sm mb-10">Vous avez un projet WordPress ? Je suis ouvert aux opportunités en Tunisie et à l'international.</p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 text-sm">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            <span>ewalid2001@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm">
+                            <i data-lucide="phone" class="w-5 h-5"></i>
+                            <span>+216 52 819 663</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-sm">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            <span>Tunis, Tunisie</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-10 md:w-2/3">
+                    <form id="contact-form" action="https://formspree.io/f/mvkpqdvp" method="POST" class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Nom Complet</label>
+                                <input type="text" name="name" id="name" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 focus:border-primary outline-none transition-all text-white">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Email</label>
+                                <input type="email" name="email" id="email" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 focus:border-primary outline-none transition-all text-white">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Sujet</label>
+                            <select name="subject" id="subject" class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 focus:border-primary outline-none transition-all text-white">
+                                <option value="Création site vitrine">Création site vitrine</option>
+                                <option value="Création site e-commerce">Création site e-commerce</option>
+                                <option value="Refonte de site">Refonte de site</option>
+                                <option value="Maintenance & optimisation">Maintenance & optimisation</option>
+                                <option value="Autre demande">Autre demande</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-slate-500 uppercase mb-2">Message</label>
+                            <textarea name="message" id="message" rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-lg px-4 py-3 focus:border-primary outline-none transition-all text-white"></textarea>
+                        </div>
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+                        <button type="submit" class="w-full py-4 bg-primary text-white font-bold rounded-lg hover:bg-blue-600 transition-colors flex items-center justify-center gap-2">
+                            Envoyer le message <i data-lucide="send" class="w-4 h-4"></i>
+                        </button>
+                        <p id="form-status" class="text-center text-sm mt-2 hidden"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-900">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-slate-500 text-sm">© 2026 Walid El Aoun — Créateur de sites WordPress professionnels. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
