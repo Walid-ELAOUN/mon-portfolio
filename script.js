@@ -156,8 +156,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: "Hero Section", url: "site optimisation section hero.png" },
                 { label: "Avant - Mobile", url: "site optimisation mobile performance avant.png" },
                 { label: "Après - Mobile", url: "site optimisation mobile performance apres.jpeg" },
+                { label: "Après - Mobile (2)", url: "site optimisation mobile performance apres 2.jpeg" },
                 { label: "Avant - Desktop", url: "site optimisation pc performance avant.png" },
                 { label: "Après - Desktop", url: "site optimisation  pc performance apres.jpeg" },
+                { label: "Après - Desktop (2)", url: "site optimisation  pc performance apres 2.jpeg" },
                 { label: "Vue Mobile", url: "site optimisation vue mobile.png" }
             ],
             link: "https://www.educpassion.ch"
