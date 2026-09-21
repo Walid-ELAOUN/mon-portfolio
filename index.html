@@ -529,6 +529,21 @@
         </div>
     </div>
 
+    <!-- Lightbox -->
+    <div id="lightbox" class="fixed inset-0 z-[200] hidden items-center justify-center p-4 bg-black/95 backdrop-blur-md">
+        <button id="lightbox-close" class="absolute top-6 right-6 text-slate-400 hover:text-white transition-colors z-10" aria-label="Fermer">
+            <i data-lucide="x-circle" size="36"></i>
+        </button>
+        <button id="lightbox-prev" class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors z-10" aria-label="Image précédente">
+            <i data-lucide="chevron-left" size="40"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Aperçu agrandi" class="max-w-full max-h-[85vh] rounded-2xl object-contain shadow-2xl border border-slate-700 select-none">
+        <button id="lightbox-next" class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white transition-colors z-10" aria-label="Image suivante">
+            <i data-lucide="chevron-right" size="40"></i>
+        </button>
+        <span id="lightbox-counter" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-slate-400 text-sm font-semibold"></span>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact" class="py-24 bg-dark/50">
         <div class="container mx-auto px-6">

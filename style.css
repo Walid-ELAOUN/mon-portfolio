@@ -6,6 +6,11 @@
     --darker: #020617;
 }
 
+/* Offset header fixe lors du scroll vers les ancres */
+html {
+    scroll-padding-top: 100px;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;

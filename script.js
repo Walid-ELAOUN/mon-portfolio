@@ -28,6 +28,55 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalContent = document.getElementById('modal-content');
     const closeModal = document.getElementById('close-modal');
 
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    let lightboxImages = [];
+    let lightboxIndex = 0;
+
+    function openLightbox(index) {
+        if (!lightboxImages.length) return;
+        lightboxIndex = index;
+        lightboxImg.src = lightboxImages[lightboxIndex];
+        lightboxCounter.textContent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+    }
+
+    function closeLightbox() {
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+    }
+
+    function showLightboxImage(delta) {
+        if (!lightboxImages.length) return;
+        lightboxIndex = (lightboxIndex + delta + lightboxImages.length) % lightboxImages.length;
+        lightboxImg.src = lightboxImages[lightboxIndex];
+        lightboxCounter.textContent = (lightboxIndex + 1) + ' / ' + lightboxImages.length;
+    }
+
+    function setupLightbox() {
+        const imgs = modalContent.querySelectorAll('img');
+        lightboxImages = Array.from(imgs).map(img => img.src);
+        imgs.forEach((img, i) => {
+            img.classList.add('cursor-pointer', 'hover:opacity-90');
+            img.addEventListener('click', () => openLightbox(i));
+        });
+    }
+
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    document.getElementById('lightbox-prev').addEventListener('click', () => showLightboxImage(-1));
+    document.getElementById('lightbox-next').addEventListener('click', () => showLightboxImage(1));
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showLightboxImage(-1);
+        if (e.key === 'ArrowRight') showLightboxImage(1);
+    });
+
     const projectData = {
         '1': {
             title: "Tathmeen",
@@ -200,6 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
             lucide.createIcons();
+            setupLightbox();
         });
     });
 
@@ -207,6 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.classList.add('hidden');
         modal.classList.remove('flex');
         document.body.style.overflow = 'auto';
+        closeLightbox();
     });
 
     window.addEventListener('click', (e) => {
