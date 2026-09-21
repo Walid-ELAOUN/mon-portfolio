@@ -56,11 +56,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function setupLightbox() {
-        const imgs = modalContent.querySelectorAll('img');
-        lightboxImages = Array.from(imgs).map(img => img.src);
-        imgs.forEach((img, i) => {
-            img.classList.add('cursor-pointer', 'hover:opacity-90');
-            img.addEventListener('click', () => openLightbox(i));
+        const mainImg = modalContent.querySelector('img.project-main');
+        const galleryItems = modalContent.querySelectorAll('.gallery-item');
+
+        lightboxImages = [];
+        if (mainImg) lightboxImages.push(mainImg.src);
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            if (img) lightboxImages.push(img.src);
+        });
+
+        if (mainImg) {
+            mainImg.classList.add('cursor-pointer', 'hover:opacity-90');
+            mainImg.addEventListener('click', () => openLightbox(0));
+        }
+        galleryItems.forEach((item, i) => {
+            item.classList.add('cursor-pointer');
+            item.addEventListener('click', () => openLightbox(i + 1));
         });
     }
 
@@ -165,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
 
                 <div class="mb-8">
-                    <img src="${data.image}" alt="${data.title}" class="rounded-2xl w-full object-cover shadow-2xl border border-slate-800">
+                    <img src="${data.image}" alt="${data.title}" class="project-main rounded-2xl w-full object-cover shadow-2xl border border-slate-800">
                 </div>
 
                 <div class="grid md:grid-cols-2 gap-10 mb-10">
@@ -223,9 +235,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     </h3>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                         ${data.gallery.map(g => `
-                            <div class="relative rounded-xl overflow-hidden border border-slate-800 group cursor-pointer">
-                                <img src="${g.url}" alt="${g.label}" class="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-500">
-                                <div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="gallery-item relative rounded-xl overflow-hidden border border-slate-800 group cursor-pointer">
+                                <img src="${g.url}" alt="${g.label}" class="w-full h-32 object-cover group-hover:scale-110 transition-transform duration-500 pointer-events-none">
+                                <div class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
                                     <span class="text-white text-xs font-bold px-2 py-1 bg-black/50 rounded">${g.label}</span>
                                 </div>
                             </div>
