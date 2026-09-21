@@ -80,6 +80,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 { label: "Formulaire Contact", url: "hydrosan formulaire de contact.png" }
             ],
             link: "https://hydrosan.tn"
+        },
+        '4': {
+            title: "Educpassion",
+            category: "Optimisation & Refonte",
+            image: "site optimisation section hero.png",
+            context: "Educpassion est le site vitrine de Jacques Monnard, promeneur professionnel de chiens. Le site souffrait de performances insuffisantes (slideshow lourd, assets non optimisés) limitant la conversion. La mission visait à transformer les performances techniques tout en réalisant une refonte stratégique du contenu et de l'ergonomie, orientée conversion via WhatsApp, avec des objectifs non négociables : score Google PageSpeed > 70 sur Mobile ET Desktop, temps de chargement < 3 secondes et optimisation stricte des Core Web Vitals (LCP, CLS, INP).",
+            solution: "Après une sauvegarde complète du site et la mise à jour du cœur de WordPress, des extensions et du thème, j'ai optimisé les performances : configuration d'une solution de cache au niveau des serveurs éco-responsables Infomaniak, minification, compression et combinaison des CSS/JS, différement des scripts non essentiels, conversion des images au format WebP avec lazy-loading et réduction du poids total et du nombre de requêtes. Côté refonte : suppression du slideshow, intégration d'une bannière fixe (Jack avec le chien), placement des témoignages et des boutons WhatsApp avec message prédéfini, suppression du formulaire de contact au profit du CTA WhatsApp, audit complet des liens et ajout d'un article « Dog sitting » optimisé.",
+            pages: ["Accueil refondu (Hero + Témoignages)", "CTA WhatsApp avec message prédéfini", "Article Dog sitting", "Suppression slideshow & formulaire"],
+            features: ["Score PageSpeed : 99 sur Mobile & Desktop", "Temps de chargement : moins de 1,1 seconde", "Cache serveur & CDN (Infomaniak)", "Images WebP + lazy-loading", "Conversion orientée WhatsApp", "Core Web Vitals optimisés (LCP, CLS, INP)", "Audit et correction des liens"],
+            tech: ["WordPress", "PageSpeed", "Core Web Vitals", "Cache & CDN", "WebP / AVIF", "Lazy-loading", "Infomaniak", "Refonte UX"],
+            result: "Une mission validée avec brio : le score PageSpeed est passé à 99 avec un chargement en moins de 1,1 seconde, soit un site ultra fluide. La refonte visuelle et l'optimisation de la conversion via WhatsApp ont été parfaitement intégrées. Le client a été tellement satisfait qu'il a confié à Walid la maintenance long terme du site en tant que webmaster attitré.",
+            gallery: [
+                { label: "Hero Section", url: "site optimisation section hero.png" },
+                { label: "Avant - Mobile", url: "site optimisation mobile performance avant.png" },
+                { label: "Après - Mobile", url: "site optimisation mobile performance apres.jpeg" },
+                { label: "Avant - Desktop", url: "site optimisation pc performance avant.png" },
+                { label: "Après - Desktop", url: "site optimisation  pc performance apres.jpeg" },
+                { label: "Vue Mobile", url: "site optimisation vue mobile.png" }
+            ],
+            link: "https://www.educpassion.ch"
         }
     };
 
